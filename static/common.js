@@ -720,11 +720,13 @@ BlocklyApps.REQUIRED_BLOCKS = undefined;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
 
 /**
- * Indicates whether or not the default display menu is used.
- * @type {boolean} Convert to bool.
+ * Indicates whether or not the default navigation menu is used.
+ * This allows for hiding the navigation menu and using some other means of
+ * navigation.
+ * @type {boolean}
  */
-BlocklyApps.DISPLAY_NAV = BlocklyApps.getStringParamFromUrl('menu', 'true');
-BlocklyApps.DISPLAY_NAV = BlocklyApps.DISPLAY_NAV === 'true';
+BlocklyApps.DISPLAY_NAV = BlocklyApps.getStringParamFromUrl('menu', 'true') ===
+    'true';
 
 /**
  * This allows the server to override the standard next level redirect.
